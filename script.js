@@ -96,15 +96,16 @@ require([
         }]
       };
 
-     var symbol = {
-      type: "picture-marker",  // autocasts as new PictureMarkerSymbol()
-      url: "https://cdn.iconscout.com/icon/premium/png-256-thumb/hockey-240-984443.png",
-      width: "64px",
-      height: "64px"
-};
-  var renderer = {
-      type: "simple",  // autocasts as new SimpleRenderer()
-      symbol: symbol
+    var renderer = {
+        type: "simple", // Use a simple renderer for single-symbol visualization.
+        symbol: {
+            type: "simple-fill", // Use a fill symbol for polygon features.
+            color: [0, 0, 0, 0], // Change the fill color to black with very low opacity.
+            outline: {
+            width: 0.5, // Keep the outline width as before.
+            color: [240,50, 0, 10] // Change the outline color to a solid green for better visibility.
+        }
+        }
     };
   
   
@@ -118,19 +119,5 @@ require([
       });
   
       map.add(featureLayer);
-  
-
-   
-      featureLayer.renderer = {
-      type: "simple",  // autocasts as new SimpleRenderer()
-      symbol: {
-        type: "simple-marker",  // autocasts as new SimpleMarkerSymbol()
-        size: 6,
-        color: "red",
-        outline: {  // autocasts as new SimpleLineSymbol()
-          width: 0.5,
-          color: "white"
-        }
-      }
-    };
+ 
     });
