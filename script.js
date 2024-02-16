@@ -92,18 +92,18 @@ require([
               places: 0
             }
           }
-                      ]
+          ]
         }]
       };
 
     var renderer = {
-        type: "simple", // Use a simple renderer for single-symbol visualization.
+        type: "simple", // Using a simple renderer for visualization.
         symbol: {
-            type: "simple-fill", // Use a fill symbol for polygon features.
-            color: [0, 0, 0, 0], // Change the fill color to black with very low opacity.
+            type: "simple-fill", 
+            color: [0, 0, 0, 0], 
             outline: {
-            width: 0.5, // Keep the outline width as before.
-            color: [240,50, 0, 10] // Change the outline color to a solid green for better visibility.
+            width: 0.5, 
+            color: [240,50, 0, 10] 
         }
         }
     };
