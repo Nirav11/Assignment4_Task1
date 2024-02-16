@@ -40,10 +40,6 @@ require([
           // in the content, it defaults to whatever may be set within the popupTemplate.
           type: "fields",
           fieldInfos: [{
-            fieldName: "NHD_NUM",
-            label: "Neighborhood Number: ",
-            visible: true
-          }, {
             fieldName: "NHD_NAME ",
             label: "Neighborhood Name: ",
             visible: true,
